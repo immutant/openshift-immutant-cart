@@ -16,7 +16,7 @@ pull in changes from your real repo and push to your OpenShift repo.
 By the way, to see the clustering features in that demo app, you'll
 need to add a gear, like so:
 
-    rhc scale-cartridge jbossas-7 -a yourapp 2
+    rhc scale-cartridge immutant -a yourapp 2
 
 Have fun, and drop in to the `#immutant` IRC channel on freenode.net
 if you have any questions.
