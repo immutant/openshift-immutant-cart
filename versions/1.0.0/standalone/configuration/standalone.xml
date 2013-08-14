@@ -365,13 +365,13 @@
     </interfaces>
 
     <socket-binding-group name="standard-sockets" default-interface="public" port-offset="0">
-        <socket-binding name="http" port="8080"/>
-        <socket-binding name="jgroups-tcp" port="7600"/>
-        <socket-binding name="management-native" interface="management" port="9999"/>
-        <socket-binding name="management-http" interface="management" port="9990"/>
-        <socket-binding name="messaging" port="5445"/>
-        <socket-binding name="messaging-throughput" port="5455"/>
-        <socket-binding name="remoting" port="4447"/>
+        <socket-binding name="http" port="${env.OPENSHIFT_IMMUTANT_HTTP_PORT}"/>
+        <socket-binding name="jgroups-tcp" port="${env.OPENSHIFT_IMMUTANT_CLUSTER_PORT}"/>
+        <socket-binding name="management-native" interface="management" port="${env.OPENSHIFT_IMMUTANT_MANAGEMENT_NATIVE_PORT}"/>
+        <socket-binding name="management-http" interface="management" port="${env.OPENSHIFT_IMMUTANT_MANAGEMENT_HTTP_PORT}"/>
+        <socket-binding name="messaging" port="${env.OPENSHIFT_IMMUTANT_MESSAGING_PORT}"/>
+        <socket-binding name="messaging-throughput" port="${env.OPENSHIFT_IMMUTANT_MESSAGING_THROUGHPUT_PORT}"/>
+        <socket-binding name="remoting" port="${env.OPENSHIFT_IMMUTANT_REMOTING_PORT}"/>
         <socket-binding name="txn-recovery-environment" port="4712"/>
         <socket-binding name="txn-status-manager" port="4713"/>
     </socket-binding-group>

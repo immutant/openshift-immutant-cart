@@ -118,6 +118,12 @@ Endpoints:
     Private-Port-Name: REMOTING_PORT
     Private-Port:      4447
     Public-Port-Name:  REMOTING_PROXY_PORT
+  - Private-IP-Name:   IP
+    Private-Port-Name: MANAGEMENT_NATIVE_PORT
+    Private-Port:      9999
+  - Private-IP-Name:   IP
+    Private-Port-Name: MANAGEMENT_HTTP_PORT
+    Private-Port:      9990
 Additional-Control-Actions:
     - threaddump
 Install-Build-Required: false
