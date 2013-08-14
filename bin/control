@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
@@ -171,7 +171,7 @@ function ishttpup() {
 # Check if the server mgmt port is up
 function ismgmtup() {
     let count=0
-    while [ ${count} -lt 10 ]
+    while [ ${count} -lt 20 ]
     do
         if /usr/sbin/lsof -P -n -i "@${OPENSHIFT_IMMUTANT_IP}:${OPENSHIFT_IMMUTANT_MANAGEMENT_NATIVE_PORT}" | grep "(LISTEN)" > /dev/null; then
             echo "Found ${OPENSHIFT_IMMUTANT_IP}:${OPENSHIFT_IMMUTANT_MANAGEMENT_NATIVE_PORT} listening port"
@@ -284,7 +284,6 @@ function start() {
     PROCESS_ID=$!
     echo "$PROCESS_ID" > ${IMMUTANT_PID_FILE}
 
-    exit 0
     if ! ishttpup; then
         echo "Timed out waiting for http listening port"
         exit 1
