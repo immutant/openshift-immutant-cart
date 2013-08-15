@@ -12,3 +12,6 @@ mkdir -p ${OPENSHIFT_IMMUTANT_DIR}/{template,standalone/tmp,standalone/deploymen
 # Copy the version specific files up to immutant directory
 cp -r ${OPENSHIFT_IMMUTANT_DIR}/versions/${version}/standalone/configuration/* ${OPENSHIFT_IMMUTANT_DIR}/standalone/configuration
 cp ${OPENSHIFT_IMMUTANT_DIR}/versions/${version}/bin/* ${OPENSHIFT_IMMUTANT_DIR}/bin
+
+# Initialize the JBoss CLI history file
+[ -f ${OPENSHIFT_HOMEDIR}/.jboss-cli-history ] || touch ${OPENSHIFT_HOMEDIR}/.jboss-cli-history

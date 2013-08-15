@@ -43,7 +43,7 @@ function waitondeployments() {
         artifacts=()
         while read -r -d $'\0'; do
           artifacts+=("$REPLY")
-        done < <(find . -iregex '.*\.\([ejrsw]ar\|zip\)$' -print0)
+        done < <(find . -iregex '.*\.\([ejrsw]ar\|zip\|clj\|ima\)$' -print0)
 
         deployexploded=false
         if [[ $SCANCONFIG =~ '"auto-deploy-exploded" => true' ]]; then
@@ -283,12 +283,12 @@ function start() {
     ${IMMUTANT_BIN_DIR}/standalone.sh > ${OPENSHIFT_TMP_DIR}/${cartridge_type}.log 2>&1 &
     PROCESS_ID=$!
     echo "$PROCESS_ID" > ${IMMUTANT_PID_FILE}
-
+    
     if ! ishttpup; then
         echo "Timed out waiting for http listening port"
         exit 1
     fi
-
+    deploy
     waitondeployments
   fi
 }
