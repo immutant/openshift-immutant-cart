@@ -61,9 +61,11 @@ Publishes:
   publish-jboss-remoting:
     Type: "NET_TCP:immutant-remoting-info"
 Subscribes:
+  set-env:
+    Type: "ENV:*"
+    Required: false
   set-db-connection-info:
     Type: "NET_TCP:db:connection-info"
-    Required: false
     Required: false
   set-mysql-connection-info:
     Type: "NET_TCP:db:mysql"
