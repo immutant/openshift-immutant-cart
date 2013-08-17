@@ -8,7 +8,18 @@ installed, and then run this:
     rhc app-create -s yourapp https://raw.github.com/immutant/openshift-immutant-cart/master/metadata/manifest.yml 
 
 Replace `yourapp` with the name of your application. The `-s` option
-sets your app to be scalable.
+sets your app to be scalable. Once created, you can login to your gear
+like so:
+
+    rhc ssh yourapp
+
+At which point, you can monitor your Immutant like so:
+
+    tail -f immutant/logs/server.log
+
+Alternatively, you can tail the log without first logging in:
+
+    rhc tail yourapp -f immutant/logs/server.log
 
 When you see `Deployed "your-clojure-application.clj"` in the log,
 point a browser at the following link (adjusted for your namespace)
