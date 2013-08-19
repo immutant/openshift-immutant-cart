@@ -1,3 +1,25 @@
+Welcome to Immutant on OpenShift!
+
+The contents of this directory match a standard Leiningen application,
+with the exception of the `.openshift/` directory, in which you will
+find the following:
+
+- `.openshift/deployments/` contains an Immutant deployment
+  descriptor, `your-clojure-application.yml`, that references the root
+  of your application when deployed on OpenShift. Anything you set in
+  here will be available via `(immutant.registry/get :config)` at
+  runtime. The `:lein-profiles` key is how you specify which Leiningen
+  profiles are active when deployed on OpenShift.
+- `.openshift/action_hooks` are documented
+  [here](http://openshift.github.io/documentation/oo_user_guide.html#action-hooks)
+- `.openshift/config` contains the JBoss configuration file,
+  `standalone.xml`, and any optional JBoss modules your app may
+  require.
+- `.openshift/markers` contains empty "marker" files which tweak
+  certain environment settings, e.g. `hot_deploy` will prevent the app
+  server from restarting with each push and `java7` will use JDK 7
+  instead of JDK 6.
+
 Any changes you push from this directory will trigger a redeploy of
 your app on your OpenShift gear[s].
 

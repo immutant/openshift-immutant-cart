@@ -17,7 +17,7 @@ mv ${OPENSHIFT_IMMUTANT_DIR}/versions/${version}/jboss/modules ${OPENSHIFT_IMMUT
 mv ${OPENSHIFT_IMMUTANT_DIR}/versions/${version}/jboss/jboss-modules.jar ${OPENSHIFT_IMMUTANT_DIR}/jboss
 cp ${OPENSHIFT_IMMUTANT_DIR}/standalone/configuration/standalone.xml ${OPENSHIFT_IMMUTANT_DIR}/template/.openshift/config
 
-sed -i "s/{APP_NAME}/${OPENSHIFT_APP_NAME}/g" ${OPENSHIFT_IMMUTANT_DIR}/template/project.clj
+sed -i "s/{APP_NAME}/${OPENSHIFT_APP_NAME}/g" ${OPENSHIFT_IMMUTANT_DIR}/template/project.clj ${OPENSHIFT_IMMUTANT_DIR}/template/resources/public/index.html
 
 JBOSS_HOME=${OPENSHIFT_IMMUTANT_DIR}/jboss
 pushd $OPENSHIFT_IMMUTANT_DIR > /dev/null

@@ -125,23 +125,24 @@
     Welcome to Immutant on OpenShift
   </h1>
   <p>
-    In order to commit to your new project, go to your project's git repo  (created with the rhc app create command) directory.
+    In order to commit to your new project, go to your project's git
+    repo (created with the rhc app-create command) directory.
   </p>
   <p>
-    For example, if you named your application yourapp (by passing in
-    -a yourapp to the rhc app create command), your Clojure source
-    code should reside beneath yourapp/src, runtime resources beneath
-    yourapp/resources and your dependencies, among other things,
-    specified in yourapp/project.clj. A deployment descriptor in which
-    you can set various runtime options for yourapp can be found in
-    yourapp/deployments/your-clojure-application.clj. You deploy
-    changes to your app simply by pushing them from the yourapp
-    directory:
+    Your Clojure source code should reside
+    beneath <b>{APP_NAME}/src</b>, runtime resources
+    beneath <b>{APP_NAME}/resources</b> and your dependencies, among
+    other things, specified in <b>{APP_NAME}/project.clj</b>. A
+    deployment descriptor in which you can set various runtime options
+    for your app can be found in
+    <b>{APP_NAME}/.openshift/deployments/your-clojure-application.clj</b>.
+    You deploy changes to your app simply by pushing them from the
+    {APP_NAME} directory:
   </p>
   <pre>
     git push
   </pre>
-  <p>See the yourapp/README for more information.</p>
+  <p>See {APP_NAME}/README.md for more information.</p>
 
   <h2>
     What's next?
@@ -152,10 +153,10 @@
       at <a href="http://immutant.org">http://immutant.org</a>, or
     </li>
     <li>
-      Why not visit us at <a href="http://openshift.redhat.com">http://openshift.redhat.com</a>, or
+      Why not visit us at <a href="https://www.openshift.com/">openshift.com</a>, or
     </li>
     <li>
-      You could get help in the <a href="http://www.redhat.com/openshift">OpenShift forums</a>, or
+      You could get help in the <a href="https://www.openshift.com/forums/openshift">OpenShift forums</a>, or
     </li>
     <li>
       You're welcome to come chat with us in our IRC channel at

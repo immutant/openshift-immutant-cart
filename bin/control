@@ -261,8 +261,8 @@ function build() {
 function deploy() {
   echo "Deploying JBoss"
 
-  if [ "$(ls ${OPENSHIFT_REPO_DIR}/deployments)" ]; then
-    rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/deployments/ $IMMUTANT_DEPLOYMENTS_DIR
+  if [ "$(ls ${OPENSHIFT_REPO_DIR}/.openshift/deployments)" ]; then
+    rsync -r --delete --exclude ".*" ${OPENSHIFT_REPO_DIR}/.openshift/deployments/ $IMMUTANT_DEPLOYMENTS_DIR
   else
     rm -rf ${IMMUTANT_DEPLOYMENTS_DIR}/*
   fi
