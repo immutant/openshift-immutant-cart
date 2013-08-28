@@ -20,6 +20,15 @@ find the following:
   server from restarting with each push and `java7` will use JDK 7
   instead of JDK 6.
 
+You can connect to your app via any nREPL client at `localhost:27888`
+after running this command:
+
+    rhc port-forward -a yourapp
+
+Your nREPL service is secured by your ssh private key. Only those
+people whose public ssh keys you associate with your app may access
+it. 
+
 Any changes you push from this directory will trigger a redeploy of
 your app on your OpenShift gear[s].
 
