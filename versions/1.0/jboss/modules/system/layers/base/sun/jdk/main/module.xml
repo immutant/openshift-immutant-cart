@@ -45,11 +45,14 @@
                 <path name="com/sun/jndi/url"/>
                 <path name="com/sun/jndi/url/dns"/>
                 <path name="com/sun/crypto/provider"/>
+                <path name="com/sun/net/httpserver"/>
+                <path name="com/sun/net/httpserver/spi"/>
                 <path name="com/sun/xml/internal/bind"/>
                 <path name="com/sun/xml/internal/bind/api"/>
                 <path name="com/sun/xml/internal/bind/marshaller"/>
                 <path name="com/sun/xml/internal/bind/unmarshaller"/>
                 <path name="com/sun/xml/internal/bind/util"/>
+                <path name="com/sun/xml/internal/bind/v2"/>
                 <path name="com/sun/org/apache/xml/internal/security/transforms/implementations"/>
                 <path name="com/sun/security/auth"/>
                 <path name="com/sun/security/auth/login"/>

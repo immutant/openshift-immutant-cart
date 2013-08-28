@@ -30,7 +30,7 @@
     <main-class name="org.jboss.as.server.DomainServerMain"/>
 
     <resources>
-        <resource-root path="jboss-as-server-7.2.x.slim.incremental.6.jar"/>
+        <resource-root path="jboss-as-server-7.2.x.slim.incremental.9.jar"/>
         <!-- Insert resources here -->
     </resources>
 

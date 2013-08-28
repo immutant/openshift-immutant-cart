@@ -27,9 +27,9 @@
     <resources>
         <resource-root path="immutant-bootstrap-module.jar"/>
         <resource-root path="clojure.jar"/>
-        <resource-root path="tools.logging.jar"/>
         <resource-root path="tools.macro.jar"/>
         <resource-root path="leiningen-core.jar"/>
+        <resource-root path="immutant-dependency-exclusions.jar"/>
         <resource-root path="dynapath.jar"/>
         <resource-root path="io.jar"/>
         <resource-root path="pomegranate.jar"/>
@@ -46,6 +46,7 @@
         <resource-root path="maven-model.jar"/>
         <resource-root path="maven-model-builder.jar"/>
         <resource-root path="maven-repository-metadata.jar"/>
+        <resource-root path="pedantic.jar"/>
         <resource-root path="plexus-utils.jar"/>
         <resource-root path="plexus-interpolation.jar"/>
         <resource-root path="useful.jar"/>

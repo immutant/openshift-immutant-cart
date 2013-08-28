@@ -28,7 +28,7 @@
     </properties>
 
     <resources>
-        <resource-root path="jboss-as-web-7.2.x.slim.incremental.6.jar"/>
+        <resource-root path="jboss-as-web-7.2.x.slim.incremental.9.jar"/>
         <resource-root path="ecj-3.7.2.jar"/>
         <resource-root path="jbossweb-7.2.0.Final.jar"/>
         <!-- Insert resources here -->

@@ -30,7 +30,7 @@
     <main-class name="org.jboss.as.cli.CommandLineMain"/>
 
     <resources>
-        <resource-root path="jboss-as-cli-7.2.x.slim.incremental.6.jar"/>
+        <resource-root path="jboss-as-cli-7.2.x.slim.incremental.9.jar"/>
         <!-- Insert resources here -->
     </resources>
 

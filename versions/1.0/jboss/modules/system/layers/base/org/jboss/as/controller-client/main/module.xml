@@ -29,7 +29,7 @@
     </exports>
 
     <resources>
-        <resource-root path="jboss-as-controller-client-7.2.x.slim.incremental.6.jar"/>
+        <resource-root path="jboss-as-controller-client-7.2.x.slim.incremental.9.jar"/>
         <!-- Insert resources here -->
     </resources>
 
